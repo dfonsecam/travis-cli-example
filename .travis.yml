@@ -1,8 +1,6 @@
 language: node_js
-
 node_js:
 - 6
-
 deploy:
   provider: gae
   skip_cleanup: true
@@ -11,7 +9,9 @@ deploy:
   default: true
   on:
     all_branches: true
-
 before_install:
 - openssl aes-256-cbc -K $encrypted_08a1dc830e89_key -iv $encrypted_08a1dc830e89_iv
   -in client-secret.json.enc -out client-secret.json -d
+notifications:
+  slack:
+    secure: enKIunajOVbsxh70yetepvdTJdysrmSoJ8ADuPItYsT3ATQATP/AObT4loiTkYt+w1TjbTKUU0kbwvckXZVCE4Tpl6vC7Mj6D5VjwVx+mDPJz9x7iSCSVP3nez5FaELk9vqqet29uvgDokBofxXcLjT4+uCsLsHitNZBinoPGDZbpobFyJPMn8VsmMi0I9cQZHgLAznpPCCfLYHXD6+3xBJKtMvKD/OgL31Ko8x0/g0Wf6NTh1DfjLWv47evM9pM8GP7ZecmtD8zX5iwz06oyhoBzospJ46Wa97priZp/nqaIPSJ09mHdTTwfPF2N6nsw9n48xPVFDBeELVoAiSnNteEwGwtR5gO/LTPfS2UH6UVfyHsDNyAZvOAmmqjgZMz7lniooiguxqani3YVIvMD8ZPp9acVpCXxRvFN8nDAVXa9kYo5i7u767GXkONmqs+diwPN6tyNpLlf1TGtb3wXttAd//bmZFW1nx+hazkXp4JxjY2kJYFPJFQaqw4JVmKI1oUP1qtx1Uyk08Wj3hLSoBY8ZmsjWmdfev1LiMV9qe0Y0VUQosxz0ZkAx8busEbgZbDJTodEj76UvWQwYVcWfpgEHQ0hoJ6as41MIj3bFfrJGEXFvUXA71DFz8ntPjiGMZSTphvfxF23aIdsyME7ix1P7xVthQg52WH/iq4lOI=
