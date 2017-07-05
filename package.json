@@ -1,0 +1,29 @@
+{
+  "name": "micro-service-api2",
+  "version": "1.0.0",
+  "description": "Microservices API 2",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=6.10.3"
+  },
+  "keywords": [
+    "travis-cli",
+    "microservice"
+  ],
+  "author": "Diego Fonseca M.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfonsecam/travis-cli-example.git"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
